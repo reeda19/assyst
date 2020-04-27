@@ -1,4 +1,4 @@
-# assyst
+# Assyst
 
 
 An App or website for finding other students on your college campus to collaborate with on projects. Students may input interests, their major, preferred group size, etc. and be matched with a project, or they may post their own project to be matched with others.
