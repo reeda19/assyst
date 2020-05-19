@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+
+// Components
+import CreatePost from "./FeedComponents/CreatePost.js";
+import Post from "./FeedComponents/Post.js";
+
+import "./App.css";
 
 function App() {
+  const [postInfo, setPostInfo] = useState([])
+
+
+  useEffect(() => {
+    fetch("./mockData.json")
+    .then(res => res.json())
+    .then(data => {
+      setPostInfo([...postInfo, ...data]);
+    });
+  }, []);
+
+  const handlePost = (infoObject) => {
+    
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div
+        style={{
+          width: "100vw",
+          height: "90vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
+        }}
+      >
+        <CreatePost />
+        
+        {postInfo.map((post, index) => (
+          <Post title={post.Title} location={post.Location} desc={post.Description} key={index}/> 
+        ))}
+
+      </div>
     </div>
   );
 }
