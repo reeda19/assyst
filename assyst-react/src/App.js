@@ -7,21 +7,19 @@ import Post from "./FeedComponents/Post.js";
 import "./App.css";
 
 function App() {
-  const [postInfo, setPostInfo] = useState([])
-
+  const [postInfo, setPostInfo] = useState([]);
 
   useEffect(() => {
-    fetch("./mockData.json")
+    fetch("/get_req")
     .then(res => res.json())
     .then(data => {
       setPostInfo([...postInfo, ...data]);
     });
   }, []);
 
-  const handlePost = (infoObject) => {
-    
+  const handlePost = () => {
+    console.log('working')
   }
-
 
   return (
     <div className="App">
@@ -35,7 +33,7 @@ function App() {
           justifyContent: "flex-start",
         }}
       >
-        <CreatePost />
+        <CreatePost onPost={handlePost}/>
         
         {postInfo.map((post, index) => (
           <Post title={post.Title} location={post.Location} desc={post.Description} key={index}/> 

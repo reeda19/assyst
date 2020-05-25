@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState }from 'react'
 
-export default function CreatePost() {
+export default function CreatePost(props) {
+    const [postInfo, setPostInfo] = useState({
+        Title: '',
+        Desc: ''
+    });
+
+    const post = () => {
+        return props.onPost;
+    }
+
     return (
         <div className="create-card" style={{margin: '10px 5px'}}>
                 {/* Display: Grid or create Divs and use Flex */}
-                <form action="">
+                <form onSubmit={post()} >
 
                     {/* Post Title */}
                     <input type="text" placeholder="Title"/>
