@@ -1,0 +1,92 @@
+.card {
+    width: 75%;
+    height: auto;
+    background-color: #192D70;
+    margin: 20px 0;
+    border-bottom-left-radius: .65rem;
+    border-bottom-right-radius: .65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: .2rem .25rem .1rem rgba(0, 0, 0, .25);
+
+}
+
+.title {
+    background-color: #6F1EF6;
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .2rem;
+}
+
+.title h1 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+    padding: 0 15px;
+    
+}
+
+.user {
+    font-weight: 300;
+}
+
+.post-card {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 5px 0;
+}
+
+.desc {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.desc h4 {
+    margin: 5px 0;
+    font-size: small;
+}
+
+.box {
+    width: 100%;
+    margin: 0;
+    min-height: 2rem;
+    background-color: #3B4C85;
+    text-align: left;
+    padding: 0 5px;
+    display: flex;
+    justify-content: c;
+    align-items: center;
+    border-radius: .25rem;
+}
+
+.box2 {
+    width: 100%;
+    margin: 0;
+    min-height: 1rem;
+    text-align: left;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    border-radius: .25rem;
+}
+
+
+.box p {
+    font-weight: 300;
+    margin: 3px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+

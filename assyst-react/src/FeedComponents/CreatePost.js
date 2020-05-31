@@ -1,4 +1,6 @@
 import React, { useState }from 'react'
+import '../Styles/makepost.css'
+
 
 export default function CreatePost(props) {
     const [postInfo, setPostInfo] = useState({

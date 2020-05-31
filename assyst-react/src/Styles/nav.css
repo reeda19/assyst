@@ -1,0 +1,70 @@
+.navbar {
+    background-color: #192D70;
+    width: 100vw;
+    height: 7.5vh;
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .45);
+}
+
+.first-half, .second-half {
+    width: 50%;
+    height: 100%;
+}
+
+.second-half {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 35px;
+}
+
+.first-half {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 35px;
+}
+
+.second-half a {
+    margin: 0 15px;
+    padding: 0;
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.profile-pic {
+     width: 2.15rem;
+     height: 2.15rem;
+     background-color: aliceblue;
+     background-size: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     border-radius: 2rem;
+     background-image: url("/pfp.png");
+     margin: 0 5px;
+}
+
+.search-bar {
+    width: 35%;
+    height: 55%;
+    border-radius: 1rem;
+    outline: none;
+    border-style: none;
+    font-weight: 500;
+    padding-left: 35px;
+    padding-right: 0;
+    background-image: url('/search.png');
+    background-size: 0.9rem;
+    background-color: #3B4C85;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 4.5%;
+    caret-color: white;
+    color: white;
+}

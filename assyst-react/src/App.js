@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // Components
 import CreatePost from "./FeedComponents/CreatePost.js";
 import Post from "./FeedComponents/Post.js";
+import Nav from "./FeedComponents/Nav.js";
 
 import "./App.css";
 
@@ -22,25 +23,18 @@ function App() {
   }
 
   return (
+    <>
+    <Nav />
     <div className="App">
-      <div
-        style={{
-          width: "100vw",
-          height: "90vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "flex-start",
-        }}
-      >
-        <CreatePost onPost={handlePost}/>
+      <div className="post-list">
         
         {postInfo.map((post, index) => (
-          <Post title={post.Title} location={post.Location} desc={post.Description} key={index}/> 
+          <Post title={post.Title} tags={post.Tags} user={post.User} location={post.Location} desc={post.Description} key={index}/> 
         ))}
-
       </div>
+      <CreatePost onPost={handlePost}/>
     </div>
+    </>
   );
 }
 
